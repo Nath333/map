@@ -1,0 +1,831 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_acdecab74db57e4844308077f2f170d8 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+</head>
+<body>
+    
+    
+    <div style="position: fixed; 
+                bottom: 50px; left: 50px; width: 150px; height: 80px; 
+                background-color: white; z-index:1000; padding: 10px; border: 2px solid grey; border-radius: 5px;">
+        <h4 style="margin:0;">Légende</h4>
+        <i style="background:blue; width:10px; height:10px; display:inline-block;"></i> VT<br>
+        <i style="background:red; width:10px; height:10px; display:inline-block;"></i> Problème<br>
+    </div>
+    
+    
+            <div class="folium-map" id="map_acdecab74db57e4844308077f2f170d8" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_acdecab74db57e4844308077f2f170d8 = L.map(
+                "map_acdecab74db57e4844308077f2f170d8",
+                {
+                    center: [46.603354, 1.888334],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 6,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_1927cd86ad75e5a6612f3b1d817636f9 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_1927cd86ad75e5a6612f3b1d817636f9.addTo(map_acdecab74db57e4844308077f2f170d8);
+        
+    
+            var marker_3afd421cc6f0a7b78dd530b0180bb077 = L.marker(
+                [45.7629138, 4.8380255],
+                {
+}
+            ).addTo(map_acdecab74db57e4844308077f2f170d8);
+        
+    
+            var icon_e4023f6849f9a115f1bcb9fd41a7677f = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+            marker_3afd421cc6f0a7b78dd530b0180bb077.setIcon(icon_e4023f6849f9a115f1bcb9fd41a7677f);
+        
+    
+        var popup_d532d337179e13d992ee3629e2f25e37 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_8454aecf8de81802db8cf72cf805d886 = $(`<div id="html_8454aecf8de81802db8cf72cf805d886" style="width: 100.0%; height: 100.0%;"><b>Arioste</b><br>1 Quai Jules courmont 69002 LYON<br>Code Postal: 69002<br>Type: vt</div>`)[0];
+                popup_d532d337179e13d992ee3629e2f25e37.setContent(html_8454aecf8de81802db8cf72cf805d886);
+            
+        
+
+        marker_3afd421cc6f0a7b78dd530b0180bb077.bindPopup(popup_d532d337179e13d992ee3629e2f25e37)
+        ;
+
+        
+    
+    
+            marker_3afd421cc6f0a7b78dd530b0180bb077.bindTooltip(
+                `<div>
+                     Arioste
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_aa4c930a0b67be3768833569e34a583e = L.marker(
+                [46.29633279485113, 6.306108812203376],
+                {
+}
+            ).addTo(map_acdecab74db57e4844308077f2f170d8);
+        
+    
+            var icon_8339512ee788a41cf4a55ff6d9c107d6 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+            marker_aa4c930a0b67be3768833569e34a583e.setIcon(icon_8339512ee788a41cf4a55ff6d9c107d6);
+        
+    
+        var popup_b6f678df762ba44c02162a39ef7438f3 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b80253b1a89ce7dc8ace7f8330bc75fb = $(`<div id="html_b80253b1a89ce7dc8ace7f8330bc75fb" style="width: 100.0%; height: 100.0%;"><b>Bricomarche Douvaine</b><br>2 rue des Niollets 74140 DOUVAINE <br>Code Postal: 74140<br>Type: vt</div>`)[0];
+                popup_b6f678df762ba44c02162a39ef7438f3.setContent(html_b80253b1a89ce7dc8ace7f8330bc75fb);
+            
+        
+
+        marker_aa4c930a0b67be3768833569e34a583e.bindPopup(popup_b6f678df762ba44c02162a39ef7438f3)
+        ;
+
+        
+    
+    
+            marker_aa4c930a0b67be3768833569e34a583e.bindTooltip(
+                `<div>
+                     Bricomarche Douvaine
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_a8cedbcf43231485bce948b5be19fead = L.marker(
+                [45.9320536, 6.598599056490881],
+                {
+}
+            ).addTo(map_acdecab74db57e4844308077f2f170d8);
+        
+    
+            var icon_23717531b0660ba9f0978e49b05a0cbe = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+            marker_a8cedbcf43231485bce948b5be19fead.setIcon(icon_23717531b0660ba9f0978e49b05a0cbe);
+        
+    
+        var popup_df333ad9f172b9479a5628826c3873dc = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_5419a50ebeb60ab8ae6472a9967a0dfc = $(`<div id="html_5419a50ebeb60ab8ae6472a9967a0dfc" style="width: 100.0%; height: 100.0%;"><b>Bricorama Domancy</b><br>LD ZAC DES MOUILLES 74700 DOMANCY <br>Code Postal: 74700<br>Type: vt</div>`)[0];
+                popup_df333ad9f172b9479a5628826c3873dc.setContent(html_5419a50ebeb60ab8ae6472a9967a0dfc);
+            
+        
+
+        marker_a8cedbcf43231485bce948b5be19fead.bindPopup(popup_df333ad9f172b9479a5628826c3873dc)
+        ;
+
+        
+    
+    
+            marker_a8cedbcf43231485bce948b5be19fead.bindTooltip(
+                `<div>
+                     Bricorama Domancy
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_aa33b843b5b7fe378c9b8d827084a50c = L.marker(
+                [46.28398423183327, 5.669537586848696],
+                {
+}
+            ).addTo(map_acdecab74db57e4844308077f2f170d8);
+        
+    
+            var icon_66701f5ecd4aa69cbb4c464dc85e9273 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+            marker_aa33b843b5b7fe378c9b8d827084a50c.setIcon(icon_66701f5ecd4aa69cbb4c464dc85e9273);
+        
+    
+        var popup_bca523dbb4843061fa3228bf1f76bed2 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_4cfed511bf872914c6b1d7ca18510ab1 = $(`<div id="html_4cfed511bf872914c6b1d7ca18510ab1" style="width: 100.0%; height: 100.0%;"><b>Intermarché Arbent </b><br>795 avenue du 19 mars 1962 01100 ARBENT <br>Code Postal: 01100<br>Type: probleme</div>`)[0];
+                popup_bca523dbb4843061fa3228bf1f76bed2.setContent(html_4cfed511bf872914c6b1d7ca18510ab1);
+            
+        
+
+        marker_aa33b843b5b7fe378c9b8d827084a50c.bindPopup(popup_bca523dbb4843061fa3228bf1f76bed2)
+        ;
+
+        
+    
+    
+            marker_aa33b843b5b7fe378c9b8d827084a50c.bindTooltip(
+                `<div>
+                     Intermarché Arbent 
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_65730116e6aa9743a2467ec6a9bd7f93 = L.marker(
+                [45.586706947212086, 5.253975086249481],
+                {
+}
+            ).addTo(map_acdecab74db57e4844308077f2f170d8);
+        
+    
+            var icon_73ea7bccf02411dfe575604b179f9d1d = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+            marker_65730116e6aa9743a2467ec6a9bd7f93.setIcon(icon_73ea7bccf02411dfe575604b179f9d1d);
+        
+    
+        var popup_6d7b52e2b1d7386f8663103807c29cf7 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_1adbdea234b2a47e70cb42239c872cdf = $(`<div id="html_1adbdea234b2a47e70cb42239c872cdf" style="width: 100.0%; height: 100.0%;"><b>Intermarche </b><br>178 Route de lyon 38300 DOMARIN <br>Code Postal: 38300<br>Type: vt</div>`)[0];
+                popup_6d7b52e2b1d7386f8663103807c29cf7.setContent(html_1adbdea234b2a47e70cb42239c872cdf);
+            
+        
+
+        marker_65730116e6aa9743a2467ec6a9bd7f93.bindPopup(popup_6d7b52e2b1d7386f8663103807c29cf7)
+        ;
+
+        
+    
+    
+            marker_65730116e6aa9743a2467ec6a9bd7f93.bindTooltip(
+                `<div>
+                     Intermarche 
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_9f9d8ca37722bda1da947b0060827b55 = L.marker(
+                [46.760017130634104, 5.2551163081845225],
+                {
+}
+            ).addTo(map_acdecab74db57e4844308077f2f170d8);
+        
+    
+            var icon_c5ed700461881b90d3d24169dbb3dab3 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+            marker_9f9d8ca37722bda1da947b0060827b55.setIcon(icon_c5ed700461881b90d3d24169dbb3dab3);
+        
+    
+        var popup_29a1887b8bb03d9ba35b215fcb152275 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_5df533f43080cd54514dbb7a2d1bd336 = $(`<div id="html_5df533f43080cd54514dbb7a2d1bd336" style="width: 100.0%; height: 100.0%;"><b>Super U Ardis</b><br>Allée de la Balme 71330 SAINT-GERMAIN-DU-BOIS<br>Code Postal: 71330<br>Type: vt</div>`)[0];
+                popup_29a1887b8bb03d9ba35b215fcb152275.setContent(html_5df533f43080cd54514dbb7a2d1bd336);
+            
+        
+
+        marker_9f9d8ca37722bda1da947b0060827b55.bindPopup(popup_29a1887b8bb03d9ba35b215fcb152275)
+        ;
+
+        
+    
+    
+            marker_9f9d8ca37722bda1da947b0060827b55.bindTooltip(
+                `<div>
+                     Super U Ardis
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_ade590f8e6b24b20bc1754914827f8f9 = L.marker(
+                [46.8623568, 4.949989],
+                {
+}
+            ).addTo(map_acdecab74db57e4844308077f2f170d8);
+        
+    
+            var icon_0c1e6493a5587ad609a785356cc846d7 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+            marker_ade590f8e6b24b20bc1754914827f8f9.setIcon(icon_0c1e6493a5587ad609a785356cc846d7);
+        
+    
+        var popup_4f17eacfa505607a7a366e0f339bbe97 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_a3355a411603e04b938b3cacc7c6c42c = $(`<div id="html_a3355a411603e04b938b3cacc7c6c42c" style="width: 100.0%; height: 100.0%;"><b>Super U Gergydis </b><br>90 route de Chalôn 71590 GERGY  <br>Code Postal: 71590<br>Type: vt</div>`)[0];
+                popup_4f17eacfa505607a7a366e0f339bbe97.setContent(html_a3355a411603e04b938b3cacc7c6c42c);
+            
+        
+
+        marker_ade590f8e6b24b20bc1754914827f8f9.bindPopup(popup_4f17eacfa505607a7a366e0f339bbe97)
+        ;
+
+        
+    
+    
+            marker_ade590f8e6b24b20bc1754914827f8f9.bindTooltip(
+                `<div>
+                     Super U Gergydis 
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_025450e474b78879f707121ea4c3078d = L.marker(
+                [46.575514058714404, 1.975854960213438],
+                {
+}
+            ).addTo(map_acdecab74db57e4844308077f2f170d8);
+        
+    
+            var icon_3dbb044c2ddc2b49b7821218b375a5a3 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+            marker_025450e474b78879f707121ea4c3078d.setIcon(icon_3dbb044c2ddc2b49b7821218b375a5a3);
+        
+    
+        var popup_2014f431dcce47af80f219607a5332ed = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_6229de92872c123c67dd88596d55a6e8 = $(`<div id="html_6229de92872c123c67dd88596d55a6e8" style="width: 100.0%; height: 100.0%;"><b>Bricomarché Le Magny </b><br>20 rue des Ajoncs 36400 LE MAGNY <br>Code Postal: 36400<br>Type: vt</div>`)[0];
+                popup_2014f431dcce47af80f219607a5332ed.setContent(html_6229de92872c123c67dd88596d55a6e8);
+            
+        
+
+        marker_025450e474b78879f707121ea4c3078d.bindPopup(popup_2014f431dcce47af80f219607a5332ed)
+        ;
+
+        
+    
+    
+            marker_025450e474b78879f707121ea4c3078d.bindTooltip(
+                `<div>
+                     Bricomarché Le Magny 
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_c9381dcd6d05d78abe522695dcd63975 = L.marker(
+                [45.7499899, 3.0851773930156634],
+                {
+}
+            ).addTo(map_acdecab74db57e4844308077f2f170d8);
+        
+    
+            var icon_6ad054396c13bee94036766c9c893b29 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+            marker_c9381dcd6d05d78abe522695dcd63975.setIcon(icon_6ad054396c13bee94036766c9c893b29);
+        
+    
+        var popup_c1f82e4fefff6538a1ec3f28dc93d184 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_696dce700b2634ae779e02bf469b5f3b = $(`<div id="html_696dce700b2634ae779e02bf469b5f3b" style="width: 100.0%; height: 100.0%;"><b>Bricorama Beaumont / EBB</b><br>Pole Commercial Champs Madame 63110 BEAUMONT<br>Code Postal: 63110<br>Type: vt</div>`)[0];
+                popup_c1f82e4fefff6538a1ec3f28dc93d184.setContent(html_696dce700b2634ae779e02bf469b5f3b);
+            
+        
+
+        marker_c9381dcd6d05d78abe522695dcd63975.bindPopup(popup_c1f82e4fefff6538a1ec3f28dc93d184)
+        ;
+
+        
+    
+    
+            marker_c9381dcd6d05d78abe522695dcd63975.bindTooltip(
+                `<div>
+                     Bricorama Beaumont / EBB
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_73024ef7853763bfb5803cdddbb3beec = L.marker(
+                [45.553143505821346, 3.2620727143156834],
+                {
+}
+            ).addTo(map_acdecab74db57e4844308077f2f170d8);
+        
+    
+            var icon_9515091aaa46ed5728cc3447e36a1add = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+            marker_73024ef7853763bfb5803cdddbb3beec.setIcon(icon_9515091aaa46ed5728cc3447e36a1add);
+        
+    
+        var popup_dfa4a80b6bc89e6d3f0f7c192e2e3dab = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d9445f623b488763789bed1273d15783 = $(`<div id="html_d9445f623b488763789bed1273d15783" style="width: 100.0%; height: 100.0%;"><b>Bricorama Issoire / EBI</b><br>1 rue Pierre Antoine Rouvet 63500 ISSOIRE <br>Code Postal: 63500<br>Type: vt</div>`)[0];
+                popup_dfa4a80b6bc89e6d3f0f7c192e2e3dab.setContent(html_d9445f623b488763789bed1273d15783);
+            
+        
+
+        marker_73024ef7853763bfb5803cdddbb3beec.bindPopup(popup_dfa4a80b6bc89e6d3f0f7c192e2e3dab)
+        ;
+
+        
+    
+    
+            marker_73024ef7853763bfb5803cdddbb3beec.bindTooltip(
+                `<div>
+                     Bricorama Issoire / EBI
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_aa098e6fad9bcd50c9a4059de8935fea = L.marker(
+                [47.2860792, 5.0099712],
+                {
+}
+            ).addTo(map_acdecab74db57e4844308077f2f170d8);
+        
+    
+            var icon_1ace12a2f069b0cca78c579d4d0fcd1d = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+            marker_aa098e6fad9bcd50c9a4059de8935fea.setIcon(icon_1ace12a2f069b0cca78c579d4d0fcd1d);
+        
+    
+        var popup_e36f084f52824a84b928c748cfce64a9 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_13e0c19036854d6e5c0bb6aacd82c092 = $(`<div id="html_13e0c19036854d6e5c0bb6aacd82c092" style="width: 100.0%; height: 100.0%;"><b>Super U Chenove </b><br>37 avenue du 14 Juillet 21300 CHENOVE<br>Code Postal: 21300<br>Type: vt</div>`)[0];
+                popup_e36f084f52824a84b928c748cfce64a9.setContent(html_13e0c19036854d6e5c0bb6aacd82c092);
+            
+        
+
+        marker_aa098e6fad9bcd50c9a4059de8935fea.bindPopup(popup_e36f084f52824a84b928c748cfce64a9)
+        ;
+
+        
+    
+    
+            marker_aa098e6fad9bcd50c9a4059de8935fea.bindTooltip(
+                `<div>
+                     Super U Chenove 
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_c4e6660eff7c02deffbbaf812c068b12 = L.marker(
+                [46.72420295, 2.46437678051535],
+                {
+}
+            ).addTo(map_acdecab74db57e4844308077f2f170d8);
+        
+    
+            var icon_e0c3875433ab09df0cb78adcdc7d9a6e = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+            marker_c4e6660eff7c02deffbbaf812c068b12.setIcon(icon_e0c3875433ab09df0cb78adcdc7d9a6e);
+        
+    
+        var popup_2813773b802bcf47b267aecf5ef775c0 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c5bbfbdaeafbf70eee239af88982884c = $(`<div id="html_c5bbfbdaeafbf70eee239af88982884c" style="width: 100.0%; height: 100.0%;"><b>Bricomarché Orval </b><br>LD les noix brulées 18200 ORVAL<br>Code Postal: 18200<br>Type: probleme</div>`)[0];
+                popup_2813773b802bcf47b267aecf5ef775c0.setContent(html_c5bbfbdaeafbf70eee239af88982884c);
+            
+        
+
+        marker_c4e6660eff7c02deffbbaf812c068b12.bindPopup(popup_2813773b802bcf47b267aecf5ef775c0)
+        ;
+
+        
+    
+    
+            marker_c4e6660eff7c02deffbbaf812c068b12.bindTooltip(
+                `<div>
+                     Bricomarché Orval 
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_bbfa9979ab3cc1837e8bfe4cac404735 = L.marker(
+                [43.1641551, 2.809254913874221],
+                {
+}
+            ).addTo(map_acdecab74db57e4844308077f2f170d8);
+        
+    
+            var icon_62b81f22867561ec5381462c0ceb7cb0 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+            marker_bbfa9979ab3cc1837e8bfe4cac404735.setIcon(icon_62b81f22867561ec5381462c0ceb7cb0);
+        
+    
+        var popup_ec60f8522bad7b0f6ba788b1d487508a = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_345631feae3729b8bb9b91848181c522 = $(`<div id="html_345631feae3729b8bb9b91848181c522" style="width: 100.0%; height: 100.0%;"><b>Bricomarché Lezignan-Corbières</b><br>ZI de Vitrac - rue Alfred Nobel 11200 LEZIGNAN-CORBIERES<br>Code Postal: 11200<br>Type: probleme</div>`)[0];
+                popup_ec60f8522bad7b0f6ba788b1d487508a.setContent(html_345631feae3729b8bb9b91848181c522);
+            
+        
+
+        marker_bbfa9979ab3cc1837e8bfe4cac404735.bindPopup(popup_ec60f8522bad7b0f6ba788b1d487508a)
+        ;
+
+        
+    
+    
+            marker_bbfa9979ab3cc1837e8bfe4cac404735.bindTooltip(
+                `<div>
+                     Bricomarché Lezignan-Corbières
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_ab3598083782ab13fe6e20a83a76f7e1 = L.marker(
+                [43.17778355, 3.028377645045972],
+                {
+}
+            ).addTo(map_acdecab74db57e4844308077f2f170d8);
+        
+    
+            var icon_0c918e5f0346ca2bbb768885a10d573c = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+            marker_ab3598083782ab13fe6e20a83a76f7e1.setIcon(icon_0c918e5f0346ca2bbb768885a10d573c);
+        
+    
+        var popup_ecddcf7a85e6f055f59ed535a23a1d06 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c15e713a63dfc4529efbc81dca0194d8 = $(`<div id="html_c15e713a63dfc4529efbc81dca0194d8" style="width: 100.0%; height: 100.0%;"><b>Tridome Jardinerie </b><br>ZAC Bonne Source 11100 NARBONNE<br>Code Postal: 11100<br>Type: probleme</div>`)[0];
+                popup_ecddcf7a85e6f055f59ed535a23a1d06.setContent(html_c15e713a63dfc4529efbc81dca0194d8);
+            
+        
+
+        marker_ab3598083782ab13fe6e20a83a76f7e1.bindPopup(popup_ecddcf7a85e6f055f59ed535a23a1d06)
+        ;
+
+        
+    
+    
+            marker_ab3598083782ab13fe6e20a83a76f7e1.bindTooltip(
+                `<div>
+                     Tridome Jardinerie 
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_4ecde48418ed477f9998ff783fb10965 = L.marker(
+                [43.1494468, 3.003542703983693],
+                {
+}
+            ).addTo(map_acdecab74db57e4844308077f2f170d8);
+        
+    
+            var icon_7174e3b6df57536a3190352457d9cd7c = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+            marker_4ecde48418ed477f9998ff783fb10965.setIcon(icon_7174e3b6df57536a3190352457d9cd7c);
+        
+    
+        var popup_e60ff44060c7b26c316585d0ef2b0c33 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_2a3673626ba02b9426a809909ab11c43 = $(`<div id="html_2a3673626ba02b9426a809909ab11c43" style="width: 100.0%; height: 100.0%;"><b>Tridome </b><br>ZAC Bonne Source - 52 boulevard de Creissel 11100 NARBONNE<br>Code Postal: 11100<br>Type: probleme</div>`)[0];
+                popup_e60ff44060c7b26c316585d0ef2b0c33.setContent(html_2a3673626ba02b9426a809909ab11c43);
+            
+        
+
+        marker_4ecde48418ed477f9998ff783fb10965.bindPopup(popup_e60ff44060c7b26c316585d0ef2b0c33)
+        ;
+
+        
+    
+    
+            marker_4ecde48418ed477f9998ff783fb10965.bindTooltip(
+                `<div>
+                     Tridome 
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_00125b9e750f1271ca896c4f995c485f = L.marker(
+                [43.2077173, 2.339968564221219],
+                {
+}
+            ).addTo(map_acdecab74db57e4844308077f2f170d8);
+        
+    
+            var icon_12484341b4c56d7d7481ac4f9ecefaea = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+            marker_00125b9e750f1271ca896c4f995c485f.setIcon(icon_12484341b4c56d7d7481ac4f9ecefaea);
+        
+    
+        var popup_2f9321daf85bb3ab7dfe2985e9e91cda = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_62291af53b6f15daab9ff6687087124c = $(`<div id="html_62291af53b6f15daab9ff6687087124c" style="width: 100.0%; height: 100.0%;"><b>Intermarché Carcassonne</b><br>ZA St Jean de l'Arnouze - rue Claude Chappe 11000 CARCASSONNE<br>Code Postal: 11000<br>Type: probleme</div>`)[0];
+                popup_2f9321daf85bb3ab7dfe2985e9e91cda.setContent(html_62291af53b6f15daab9ff6687087124c);
+            
+        
+
+        marker_00125b9e750f1271ca896c4f995c485f.bindPopup(popup_2f9321daf85bb3ab7dfe2985e9e91cda)
+        ;
+
+        
+    
+    
+            marker_00125b9e750f1271ca896c4f995c485f.bindTooltip(
+                `<div>
+                     Intermarché Carcassonne
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+</script>
+</html>
