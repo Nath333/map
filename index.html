@@ -25,7 +25,7 @@
             <meta name="viewport" content="width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
             <style>
-                #map_acdecab74db57e4844308077f2f170d8 {
+                #map_6921c71aea8d47cf6a2739d4a2acdb77 {
                     position: relative;
                     width: 100.0%;
                     height: 100.0%;
@@ -40,22 +40,40 @@
     
     
     <div style="position: fixed; 
-                bottom: 50px; left: 50px; width: 150px; height: 80px; 
-                background-color: white; z-index:1000; padding: 10px; border: 2px solid grey; border-radius: 5px;">
-        <h4 style="margin:0;">Légende</h4>
-        <i style="background:blue; width:10px; height:10px; display:inline-block;"></i> VT<br>
-        <i style="background:red; width:10px; height:10px; display:inline-block;"></i> Problème<br>
+                bottom: 50px; left: 50px; width: 180px; height: auto; 
+                background-color: #C6C7C8; z-index:1000; padding: 10px; border: 2px solid grey; border-radius: 5px;">
+        <h4 style="margin:0; text-align: center;">Légende</h4>
+        <div style="margin-bottom: 5px;">
+            <span style="display: inline-block; width: 12px; height: 12px; background: blue; border-radius: 50%; margin-right: 8px;"></span>
+            VT
+        </div>
+        <div style="margin-bottom: 5px;">
+            <span style="display: inline-block; width: 12px; height: 12px; background: red; border-radius: 50%; margin-right: 8px;"></span>
+            SAV
+        </div>
+        <div style="margin-bottom: 5px;">
+            <span style="display: inline-block; width: 12px; height: 12px; background: grey; border-radius: 50%; margin-right: 8px;"></span>
+            Install
+        </div>
+        <div style="margin-bottom: 5px;">
+            <span style="display: inline-block; width: 12px; height: 12px; border: 2px solid green; border-radius: 50%; margin-right: 8px;"></span>
+            Planifié
+        </div>
+        <div>
+            <span style="display: inline-block; width: 12px; height: 12px; border: 2px solid white; border-radius: 50%; background: transparent; margin-right: 8px;"></span>
+            Non planifié
+        </div>
     </div>
     
     
-            <div class="folium-map" id="map_acdecab74db57e4844308077f2f170d8" ></div>
+            <div class="folium-map" id="map_6921c71aea8d47cf6a2739d4a2acdb77" ></div>
         
 </body>
 <script>
     
     
-            var map_acdecab74db57e4844308077f2f170d8 = L.map(
-                "map_acdecab74db57e4844308077f2f170d8",
+            var map_6921c71aea8d47cf6a2739d4a2acdb77 = L.map(
+                "map_6921c71aea8d47cf6a2739d4a2acdb77",
                 {
                     center: [46.603354, 1.888334],
                     crs: L.CRS.EPSG3857,
@@ -72,7 +90,7 @@
 
         
     
-            var tile_layer_1927cd86ad75e5a6612f3b1d817636f9 = L.tileLayer(
+            var tile_layer_e14a939432b750c83fec3ca2b3b19cfc = L.tileLayer(
                 "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
                 {
   "minZoom": 0,
@@ -89,92 +107,41 @@
             );
         
     
-            tile_layer_1927cd86ad75e5a6612f3b1d817636f9.addTo(map_acdecab74db57e4844308077f2f170d8);
+            tile_layer_e14a939432b750c83fec3ca2b3b19cfc.addTo(map_6921c71aea8d47cf6a2739d4a2acdb77);
         
     
-            var marker_3afd421cc6f0a7b78dd530b0180bb077 = L.marker(
-                [45.7629138, 4.8380255],
-                {
-}
-            ).addTo(map_acdecab74db57e4844308077f2f170d8);
-        
-    
-            var icon_e4023f6849f9a115f1bcb9fd41a7677f = L.AwesomeMarkers.icon(
-                {
-  "markerColor": "blue",
-  "iconColor": "white",
-  "icon": "info-sign",
-  "prefix": "glyphicon",
-  "extraClasses": "fa-rotate-0",
-}
-            );
-            marker_3afd421cc6f0a7b78dd530b0180bb077.setIcon(icon_e4023f6849f9a115f1bcb9fd41a7677f);
-        
-    
-        var popup_d532d337179e13d992ee3629e2f25e37 = L.popup({
-  "maxWidth": "100%",
-});
-
-        
-            
-                var html_8454aecf8de81802db8cf72cf805d886 = $(`<div id="html_8454aecf8de81802db8cf72cf805d886" style="width: 100.0%; height: 100.0%;"><b>Arioste</b><br>1 Quai Jules courmont 69002 LYON<br>Code Postal: 69002<br>Type: vt</div>`)[0];
-                popup_d532d337179e13d992ee3629e2f25e37.setContent(html_8454aecf8de81802db8cf72cf805d886);
-            
-        
-
-        marker_3afd421cc6f0a7b78dd530b0180bb077.bindPopup(popup_d532d337179e13d992ee3629e2f25e37)
-        ;
-
-        
-    
-    
-            marker_3afd421cc6f0a7b78dd530b0180bb077.bindTooltip(
-                `<div>
-                     Arioste
-                 </div>`,
-                {
-  "sticky": true,
-}
-            );
-        
-    
-            var marker_aa4c930a0b67be3768833569e34a583e = L.marker(
+            var marker_b60a08e8ccc4e613918e659d687af7df = L.marker(
                 [46.29633279485113, 6.306108812203376],
                 {
 }
-            ).addTo(map_acdecab74db57e4844308077f2f170d8);
+            ).addTo(map_6921c71aea8d47cf6a2739d4a2acdb77);
         
     
-            var icon_8339512ee788a41cf4a55ff6d9c107d6 = L.AwesomeMarkers.icon(
-                {
-  "markerColor": "blue",
-  "iconColor": "white",
-  "icon": "info-sign",
-  "prefix": "glyphicon",
-  "extraClasses": "fa-rotate-0",
-}
-            );
-            marker_aa4c930a0b67be3768833569e34a583e.setIcon(icon_8339512ee788a41cf4a55ff6d9c107d6);
+            var div_icon_e35c196694621bf44727e6d40e25632e = L.divIcon({
+  "html": "\n                    \u003cdiv style=\"\n                        display: flex;\n                        align-items: center;\n                        justify-content: center;\n                        width: 30px;\n                        height: 30px;\n                        border: 4px solid green; \n                        background-color: gray; \n                        color: white; \n                        border-radius: 50%; \n                        font-size: 12px; \n                        font-weight: bold;\"\u003e\n                        0.0\n                    \u003c/div\u003e\n                    ",
+  "className": "empty",
+});
+            marker_b60a08e8ccc4e613918e659d687af7df.setIcon(div_icon_e35c196694621bf44727e6d40e25632e);
         
     
-        var popup_b6f678df762ba44c02162a39ef7438f3 = L.popup({
-  "maxWidth": "100%",
+        var popup_0b05b92f14dc8c0fd71399d73428402a = L.popup({
+  "maxWidth": 400,
 });
 
         
             
-                var html_b80253b1a89ce7dc8ace7f8330bc75fb = $(`<div id="html_b80253b1a89ce7dc8ace7f8330bc75fb" style="width: 100.0%; height: 100.0%;"><b>Bricomarche Douvaine</b><br>2 rue des Niollets 74140 DOUVAINE <br>Code Postal: 74140<br>Type: vt</div>`)[0];
-                popup_b6f678df762ba44c02162a39ef7438f3.setContent(html_b80253b1a89ce7dc8ace7f8330bc75fb);
+                var html_99942afdbfa37feb8162301da812a5ab = $(`<div id="html_99942afdbfa37feb8162301da812a5ab" style="width: 100.0%; height: 100.0%;"><b>Bricomarche Douvaine</b><br>2 rue des Niollets 74140 DOUVAINE <br>Code Postal: 74140<br>Date planifié: 20-23/2<br>Responsable: nan<br>Detail: </div>`)[0];
+                popup_0b05b92f14dc8c0fd71399d73428402a.setContent(html_99942afdbfa37feb8162301da812a5ab);
             
         
 
-        marker_aa4c930a0b67be3768833569e34a583e.bindPopup(popup_b6f678df762ba44c02162a39ef7438f3)
+        marker_b60a08e8ccc4e613918e659d687af7df.bindPopup(popup_0b05b92f14dc8c0fd71399d73428402a)
         ;
 
         
     
     
-            marker_aa4c930a0b67be3768833569e34a583e.bindTooltip(
+            marker_b60a08e8ccc4e613918e659d687af7df.bindTooltip(
                 `<div>
                      Bricomarche Douvaine
                  </div>`,
@@ -184,89 +151,38 @@
             );
         
     
-            var marker_a8cedbcf43231485bce948b5be19fead = L.marker(
-                [45.9320536, 6.598599056490881],
-                {
-}
-            ).addTo(map_acdecab74db57e4844308077f2f170d8);
-        
-    
-            var icon_23717531b0660ba9f0978e49b05a0cbe = L.AwesomeMarkers.icon(
-                {
-  "markerColor": "blue",
-  "iconColor": "white",
-  "icon": "info-sign",
-  "prefix": "glyphicon",
-  "extraClasses": "fa-rotate-0",
-}
-            );
-            marker_a8cedbcf43231485bce948b5be19fead.setIcon(icon_23717531b0660ba9f0978e49b05a0cbe);
-        
-    
-        var popup_df333ad9f172b9479a5628826c3873dc = L.popup({
-  "maxWidth": "100%",
-});
-
-        
-            
-                var html_5419a50ebeb60ab8ae6472a9967a0dfc = $(`<div id="html_5419a50ebeb60ab8ae6472a9967a0dfc" style="width: 100.0%; height: 100.0%;"><b>Bricorama Domancy</b><br>LD ZAC DES MOUILLES 74700 DOMANCY <br>Code Postal: 74700<br>Type: vt</div>`)[0];
-                popup_df333ad9f172b9479a5628826c3873dc.setContent(html_5419a50ebeb60ab8ae6472a9967a0dfc);
-            
-        
-
-        marker_a8cedbcf43231485bce948b5be19fead.bindPopup(popup_df333ad9f172b9479a5628826c3873dc)
-        ;
-
-        
-    
-    
-            marker_a8cedbcf43231485bce948b5be19fead.bindTooltip(
-                `<div>
-                     Bricorama Domancy
-                 </div>`,
-                {
-  "sticky": true,
-}
-            );
-        
-    
-            var marker_aa33b843b5b7fe378c9b8d827084a50c = L.marker(
+            var marker_874175310b53a161213482c18d84594f = L.marker(
                 [46.28398423183327, 5.669537586848696],
                 {
 }
-            ).addTo(map_acdecab74db57e4844308077f2f170d8);
+            ).addTo(map_6921c71aea8d47cf6a2739d4a2acdb77);
         
     
-            var icon_66701f5ecd4aa69cbb4c464dc85e9273 = L.AwesomeMarkers.icon(
-                {
-  "markerColor": "red",
-  "iconColor": "white",
-  "icon": "info-sign",
-  "prefix": "glyphicon",
-  "extraClasses": "fa-rotate-0",
-}
-            );
-            marker_aa33b843b5b7fe378c9b8d827084a50c.setIcon(icon_66701f5ecd4aa69cbb4c464dc85e9273);
+            var div_icon_841df3c9a60bedf298992a8dfdc90cf2 = L.divIcon({
+  "html": "\n                    \u003cdiv style=\"\n                        display: flex;\n                        align-items: center;\n                        justify-content: center;\n                        width: 30px;\n                        height: 30px;\n                        border: 4px solid green; \n                        background-color: gray; \n                        color: white; \n                        border-radius: 50%; \n                        font-size: 12px; \n                        font-weight: bold;\"\u003e\n                        0.0\n                    \u003c/div\u003e\n                    ",
+  "className": "empty",
+});
+            marker_874175310b53a161213482c18d84594f.setIcon(div_icon_841df3c9a60bedf298992a8dfdc90cf2);
         
     
-        var popup_bca523dbb4843061fa3228bf1f76bed2 = L.popup({
-  "maxWidth": "100%",
+        var popup_de95c338873b32bb9694ce8ffa837b35 = L.popup({
+  "maxWidth": 400,
 });
 
         
             
-                var html_4cfed511bf872914c6b1d7ca18510ab1 = $(`<div id="html_4cfed511bf872914c6b1d7ca18510ab1" style="width: 100.0%; height: 100.0%;"><b>Intermarché Arbent </b><br>795 avenue du 19 mars 1962 01100 ARBENT <br>Code Postal: 01100<br>Type: probleme</div>`)[0];
-                popup_bca523dbb4843061fa3228bf1f76bed2.setContent(html_4cfed511bf872914c6b1d7ca18510ab1);
+                var html_ee613f25a3cbb3da93c86f1699724def = $(`<div id="html_ee613f25a3cbb3da93c86f1699724def" style="width: 100.0%; height: 100.0%;"><b>Intermarché Arbent </b><br>795 avenue du 19 mars 1962 01100 ARBENT <br>Code Postal: 01100<br>Date planifié: 16/1 <br>Responsable: 06 12 06 19 98 JP schichler<br>Detail: </div>`)[0];
+                popup_de95c338873b32bb9694ce8ffa837b35.setContent(html_ee613f25a3cbb3da93c86f1699724def);
             
         
 
-        marker_aa33b843b5b7fe378c9b8d827084a50c.bindPopup(popup_bca523dbb4843061fa3228bf1f76bed2)
+        marker_874175310b53a161213482c18d84594f.bindPopup(popup_de95c338873b32bb9694ce8ffa837b35)
         ;
 
         
     
     
-            marker_aa33b843b5b7fe378c9b8d827084a50c.bindTooltip(
+            marker_874175310b53a161213482c18d84594f.bindTooltip(
                 `<div>
                      Intermarché Arbent 
                  </div>`,
@@ -276,45 +192,40 @@
             );
         
     
-            var marker_65730116e6aa9743a2467ec6a9bd7f93 = L.marker(
+            var marker_cfd9d3fe08fdc7cdab1504fa32837782 = L.marker(
                 [45.586706947212086, 5.253975086249481],
                 {
 }
-            ).addTo(map_acdecab74db57e4844308077f2f170d8);
+            ).addTo(map_6921c71aea8d47cf6a2739d4a2acdb77);
         
     
-            var icon_73ea7bccf02411dfe575604b179f9d1d = L.AwesomeMarkers.icon(
-                {
-  "markerColor": "blue",
-  "iconColor": "white",
-  "icon": "info-sign",
-  "prefix": "glyphicon",
-  "extraClasses": "fa-rotate-0",
-}
-            );
-            marker_65730116e6aa9743a2467ec6a9bd7f93.setIcon(icon_73ea7bccf02411dfe575604b179f9d1d);
+            var div_icon_3d3c360a4a7c3f280e063716eae4ef4b = L.divIcon({
+  "html": "\n                    \u003cdiv style=\"\n                        display: flex;\n                        align-items: center;\n                        justify-content: center;\n                        width: 30px;\n                        height: 30px;\n                        border: 4px solid white; \n                        background-color: blue; \n                        color: white; \n                        border-radius: 50%; \n                        font-size: 12px; \n                        font-weight: bold;\"\u003e\n                        1.0\n                    \u003c/div\u003e\n                    ",
+  "className": "empty",
+});
+            marker_cfd9d3fe08fdc7cdab1504fa32837782.setIcon(div_icon_3d3c360a4a7c3f280e063716eae4ef4b);
         
     
-        var popup_6d7b52e2b1d7386f8663103807c29cf7 = L.popup({
-  "maxWidth": "100%",
+        var popup_ae0d08352560dd734f1baad960bd624f = L.popup({
+  "maxWidth": 400,
 });
 
         
             
-                var html_1adbdea234b2a47e70cb42239c872cdf = $(`<div id="html_1adbdea234b2a47e70cb42239c872cdf" style="width: 100.0%; height: 100.0%;"><b>Intermarche </b><br>178 Route de lyon 38300 DOMARIN <br>Code Postal: 38300<br>Type: vt</div>`)[0];
-                popup_6d7b52e2b1d7386f8663103807c29cf7.setContent(html_1adbdea234b2a47e70cb42239c872cdf);
+                var html_7cc7afe0a4615bb73e5dc5c2913e40f4 = $(`<div id="html_7cc7afe0a4615bb73e5dc5c2913e40f4" style="width: 100.0%; height: 100.0%;"><b>Intermarche Domarin</b><br>178 Route de lyon 38300 DOMARIN <br>Code Postal: 38300<br>Date planifié: nan<br>Responsable: nan<br>Detail: </div>`)[0];
+                popup_ae0d08352560dd734f1baad960bd624f.setContent(html_7cc7afe0a4615bb73e5dc5c2913e40f4);
             
         
 
-        marker_65730116e6aa9743a2467ec6a9bd7f93.bindPopup(popup_6d7b52e2b1d7386f8663103807c29cf7)
+        marker_cfd9d3fe08fdc7cdab1504fa32837782.bindPopup(popup_ae0d08352560dd734f1baad960bd624f)
         ;
 
         
     
     
-            marker_65730116e6aa9743a2467ec6a9bd7f93.bindTooltip(
+            marker_cfd9d3fe08fdc7cdab1504fa32837782.bindTooltip(
                 `<div>
-                     Intermarche 
+                     Intermarche Domarin
                  </div>`,
                 {
   "sticky": true,
@@ -322,43 +233,38 @@
             );
         
     
-            var marker_9f9d8ca37722bda1da947b0060827b55 = L.marker(
+            var marker_3ace2c10d4a30c785bbd1f0bea03e3a4 = L.marker(
                 [46.760017130634104, 5.2551163081845225],
                 {
 }
-            ).addTo(map_acdecab74db57e4844308077f2f170d8);
+            ).addTo(map_6921c71aea8d47cf6a2739d4a2acdb77);
         
     
-            var icon_c5ed700461881b90d3d24169dbb3dab3 = L.AwesomeMarkers.icon(
-                {
-  "markerColor": "blue",
-  "iconColor": "white",
-  "icon": "info-sign",
-  "prefix": "glyphicon",
-  "extraClasses": "fa-rotate-0",
-}
-            );
-            marker_9f9d8ca37722bda1da947b0060827b55.setIcon(icon_c5ed700461881b90d3d24169dbb3dab3);
+            var div_icon_65739fec27eecd86f9c3b4e505fe3718 = L.divIcon({
+  "html": "\n                    \u003cdiv style=\"\n                        display: flex;\n                        align-items: center;\n                        justify-content: center;\n                        width: 30px;\n                        height: 30px;\n                        border: 4px solid white; \n                        background-color: blue; \n                        color: white; \n                        border-radius: 50%; \n                        font-size: 12px; \n                        font-weight: bold;\"\u003e\n                        2.0\n                    \u003c/div\u003e\n                    ",
+  "className": "empty",
+});
+            marker_3ace2c10d4a30c785bbd1f0bea03e3a4.setIcon(div_icon_65739fec27eecd86f9c3b4e505fe3718);
         
     
-        var popup_29a1887b8bb03d9ba35b215fcb152275 = L.popup({
-  "maxWidth": "100%",
+        var popup_25b814a17f3490ea1d3fb7865f4dd41f = L.popup({
+  "maxWidth": 400,
 });
 
         
             
-                var html_5df533f43080cd54514dbb7a2d1bd336 = $(`<div id="html_5df533f43080cd54514dbb7a2d1bd336" style="width: 100.0%; height: 100.0%;"><b>Super U Ardis</b><br>Allée de la Balme 71330 SAINT-GERMAIN-DU-BOIS<br>Code Postal: 71330<br>Type: vt</div>`)[0];
-                popup_29a1887b8bb03d9ba35b215fcb152275.setContent(html_5df533f43080cd54514dbb7a2d1bd336);
+                var html_3e3340a40ee6b4c91668d087c34b60de = $(`<div id="html_3e3340a40ee6b4c91668d087c34b60de" style="width: 100.0%; height: 100.0%;"><b>Super U Ardis</b><br>Allée de la Balme 71330 SAINT-GERMAIN-DU-BOIS<br>Code Postal: 71330<br>Date planifié: nan<br>Responsable: nan<br>Detail: </div>`)[0];
+                popup_25b814a17f3490ea1d3fb7865f4dd41f.setContent(html_3e3340a40ee6b4c91668d087c34b60de);
             
         
 
-        marker_9f9d8ca37722bda1da947b0060827b55.bindPopup(popup_29a1887b8bb03d9ba35b215fcb152275)
+        marker_3ace2c10d4a30c785bbd1f0bea03e3a4.bindPopup(popup_25b814a17f3490ea1d3fb7865f4dd41f)
         ;
 
         
     
     
-            marker_9f9d8ca37722bda1da947b0060827b55.bindTooltip(
+            marker_3ace2c10d4a30c785bbd1f0bea03e3a4.bindTooltip(
                 `<div>
                      Super U Ardis
                  </div>`,
@@ -368,43 +274,120 @@
             );
         
     
-            var marker_ade590f8e6b24b20bc1754914827f8f9 = L.marker(
-                [46.8623568, 4.949989],
+            var marker_36df84d9740bfbc52f9663b5f14d0d7a = L.marker(
+                [45.8108502, 4.8698189],
                 {
 }
-            ).addTo(map_acdecab74db57e4844308077f2f170d8);
+            ).addTo(map_6921c71aea8d47cf6a2739d4a2acdb77);
         
     
-            var icon_0c1e6493a5587ad609a785356cc846d7 = L.AwesomeMarkers.icon(
-                {
-  "markerColor": "blue",
-  "iconColor": "white",
-  "icon": "info-sign",
-  "prefix": "glyphicon",
-  "extraClasses": "fa-rotate-0",
-}
-            );
-            marker_ade590f8e6b24b20bc1754914827f8f9.setIcon(icon_0c1e6493a5587ad609a785356cc846d7);
+            var div_icon_33e9a8f7917b063329fec7414bd700c9 = L.divIcon({
+  "html": "\n                    \u003cdiv style=\"\n                        display: flex;\n                        align-items: center;\n                        justify-content: center;\n                        width: 30px;\n                        height: 30px;\n                        border: 4px solid white; \n                        background-color: blue; \n                        color: white; \n                        border-radius: 50%; \n                        font-size: 12px; \n                        font-weight: bold;\"\u003e\n                        3.0\n                    \u003c/div\u003e\n                    ",
+  "className": "empty",
+});
+            marker_36df84d9740bfbc52f9663b5f14d0d7a.setIcon(div_icon_33e9a8f7917b063329fec7414bd700c9);
         
     
-        var popup_4f17eacfa505607a7a366e0f339bbe97 = L.popup({
-  "maxWidth": "100%",
+        var popup_16f6bf053f6706a193e24169ba9a31c8 = L.popup({
+  "maxWidth": 400,
 });
 
         
             
-                var html_a3355a411603e04b938b3cacc7c6c42c = $(`<div id="html_a3355a411603e04b938b3cacc7c6c42c" style="width: 100.0%; height: 100.0%;"><b>Super U Gergydis </b><br>90 route de Chalôn 71590 GERGY  <br>Code Postal: 71590<br>Type: vt</div>`)[0];
-                popup_4f17eacfa505607a7a366e0f339bbe97.setContent(html_a3355a411603e04b938b3cacc7c6c42c);
+                var html_ba59d315e5f5ed07538ca4ad1d17a7dd = $(`<div id="html_ba59d315e5f5ed07538ca4ad1d17a7dd" style="width: 100.0%; height: 100.0%;"><b>Jardin Fleuri </b><br>1407 chemin Pierre Drevet 69300 CALUIRE ET CUIRE <br>Code Postal: 69300<br>Date planifié: nan<br>Responsable: nan<br>Detail: </div>`)[0];
+                popup_16f6bf053f6706a193e24169ba9a31c8.setContent(html_ba59d315e5f5ed07538ca4ad1d17a7dd);
             
         
 
-        marker_ade590f8e6b24b20bc1754914827f8f9.bindPopup(popup_4f17eacfa505607a7a366e0f339bbe97)
+        marker_36df84d9740bfbc52f9663b5f14d0d7a.bindPopup(popup_16f6bf053f6706a193e24169ba9a31c8)
         ;
 
         
     
     
-            marker_ade590f8e6b24b20bc1754914827f8f9.bindTooltip(
+            marker_36df84d9740bfbc52f9663b5f14d0d7a.bindTooltip(
+                `<div>
+                     Jardin Fleuri 
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_cf149e81a3b71b2495e6e92c04a887ab = L.marker(
+                [45.7637475, 4.7992156],
+                {
+}
+            ).addTo(map_6921c71aea8d47cf6a2739d4a2acdb77);
+        
+    
+            var div_icon_9c14cbdfef3e1919c77163f438ea7d15 = L.divIcon({
+  "html": "\n                    \u003cdiv style=\"\n                        display: flex;\n                        align-items: center;\n                        justify-content: center;\n                        width: 30px;\n                        height: 30px;\n                        border: 4px solid white; \n                        background-color: blue; \n                        color: white; \n                        border-radius: 50%; \n                        font-size: 12px; \n                        font-weight: bold;\"\u003e\n                        3.0\n                    \u003c/div\u003e\n                    ",
+  "className": "empty",
+});
+            marker_cf149e81a3b71b2495e6e92c04a887ab.setIcon(div_icon_9c14cbdfef3e1919c77163f438ea7d15);
+        
+    
+        var popup_b17c790fc68d83285e45066d5d4ae081 = L.popup({
+  "maxWidth": 400,
+});
+
+        
+            
+                var html_151fa710f86b815c61c7637489ede95f = $(`<div id="html_151fa710f86b815c61c7637489ede95f" style="width: 100.0%; height: 100.0%;"><b>Jardin Fleuri </b><br>140 avenue Barthélémy Buyer 69009 LYON<br>Code Postal: 69009<br>Date planifié: nan<br>Responsable: nan<br>Detail: </div>`)[0];
+                popup_b17c790fc68d83285e45066d5d4ae081.setContent(html_151fa710f86b815c61c7637489ede95f);
+            
+        
+
+        marker_cf149e81a3b71b2495e6e92c04a887ab.bindPopup(popup_b17c790fc68d83285e45066d5d4ae081)
+        ;
+
+        
+    
+    
+            marker_cf149e81a3b71b2495e6e92c04a887ab.bindTooltip(
+                `<div>
+                     Jardin Fleuri 
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_ee4ffccc61a12d95027a559083a7c4ee = L.marker(
+                [46.8623568, 4.949989],
+                {
+}
+            ).addTo(map_6921c71aea8d47cf6a2739d4a2acdb77);
+        
+    
+            var div_icon_24b5762edef303334f307079147fa25c = L.divIcon({
+  "html": "\n                    \u003cdiv style=\"\n                        display: flex;\n                        align-items: center;\n                        justify-content: center;\n                        width: 30px;\n                        height: 30px;\n                        border: 4px solid white; \n                        background-color: blue; \n                        color: white; \n                        border-radius: 50%; \n                        font-size: 12px; \n                        font-weight: bold;\"\u003e\n                        3.0\n                    \u003c/div\u003e\n                    ",
+  "className": "empty",
+});
+            marker_ee4ffccc61a12d95027a559083a7c4ee.setIcon(div_icon_24b5762edef303334f307079147fa25c);
+        
+    
+        var popup_ae7d09a42d8a6db633a0fcaca70cd432 = L.popup({
+  "maxWidth": 400,
+});
+
+        
+            
+                var html_457e0c0fa5ba7626c5454cfb5a23762b = $(`<div id="html_457e0c0fa5ba7626c5454cfb5a23762b" style="width: 100.0%; height: 100.0%;"><b>Super U Gergydis </b><br>90 route de Chalôn 71590 GERGY  <br>Code Postal: 71590<br>Date planifié: nan<br>Responsable: nan<br>Detail: </div>`)[0];
+                popup_ae7d09a42d8a6db633a0fcaca70cd432.setContent(html_457e0c0fa5ba7626c5454cfb5a23762b);
+            
+        
+
+        marker_ee4ffccc61a12d95027a559083a7c4ee.bindPopup(popup_ae7d09a42d8a6db633a0fcaca70cd432)
+        ;
+
+        
+    
+    
+            marker_ee4ffccc61a12d95027a559083a7c4ee.bindTooltip(
                 `<div>
                      Super U Gergydis 
                  </div>`,
@@ -414,43 +397,38 @@
             );
         
     
-            var marker_025450e474b78879f707121ea4c3078d = L.marker(
+            var marker_6ca573ce2c3d7a3653fd0f4341f79cdb = L.marker(
                 [46.575514058714404, 1.975854960213438],
                 {
 }
-            ).addTo(map_acdecab74db57e4844308077f2f170d8);
+            ).addTo(map_6921c71aea8d47cf6a2739d4a2acdb77);
         
     
-            var icon_3dbb044c2ddc2b49b7821218b375a5a3 = L.AwesomeMarkers.icon(
-                {
-  "markerColor": "blue",
-  "iconColor": "white",
-  "icon": "info-sign",
-  "prefix": "glyphicon",
-  "extraClasses": "fa-rotate-0",
-}
-            );
-            marker_025450e474b78879f707121ea4c3078d.setIcon(icon_3dbb044c2ddc2b49b7821218b375a5a3);
+            var div_icon_c9b9f5b3ce842e9e1355510f61d1dc86 = L.divIcon({
+  "html": "\n                    \u003cdiv style=\"\n                        display: flex;\n                        align-items: center;\n                        justify-content: center;\n                        width: 30px;\n                        height: 30px;\n                        border: 4px solid white; \n                        background-color: blue; \n                        color: white; \n                        border-radius: 50%; \n                        font-size: 12px; \n                        font-weight: bold;\"\u003e\n                        4.0\n                    \u003c/div\u003e\n                    ",
+  "className": "empty",
+});
+            marker_6ca573ce2c3d7a3653fd0f4341f79cdb.setIcon(div_icon_c9b9f5b3ce842e9e1355510f61d1dc86);
         
     
-        var popup_2014f431dcce47af80f219607a5332ed = L.popup({
-  "maxWidth": "100%",
+        var popup_76da5d910813f7989f931de8d05032d4 = L.popup({
+  "maxWidth": 400,
 });
 
         
             
-                var html_6229de92872c123c67dd88596d55a6e8 = $(`<div id="html_6229de92872c123c67dd88596d55a6e8" style="width: 100.0%; height: 100.0%;"><b>Bricomarché Le Magny </b><br>20 rue des Ajoncs 36400 LE MAGNY <br>Code Postal: 36400<br>Type: vt</div>`)[0];
-                popup_2014f431dcce47af80f219607a5332ed.setContent(html_6229de92872c123c67dd88596d55a6e8);
+                var html_da955ebd27d5a406519202bbfc356bc6 = $(`<div id="html_da955ebd27d5a406519202bbfc356bc6" style="width: 100.0%; height: 100.0%;"><b>Bricomarché Le Magny </b><br>20 rue des Ajoncs 36400 LE MAGNY <br>Code Postal: 36400<br>Date planifié: nan<br>Responsable: nan<br>Detail: </div>`)[0];
+                popup_76da5d910813f7989f931de8d05032d4.setContent(html_da955ebd27d5a406519202bbfc356bc6);
             
         
 
-        marker_025450e474b78879f707121ea4c3078d.bindPopup(popup_2014f431dcce47af80f219607a5332ed)
+        marker_6ca573ce2c3d7a3653fd0f4341f79cdb.bindPopup(popup_76da5d910813f7989f931de8d05032d4)
         ;
 
         
     
     
-            marker_025450e474b78879f707121ea4c3078d.bindTooltip(
+            marker_6ca573ce2c3d7a3653fd0f4341f79cdb.bindTooltip(
                 `<div>
                      Bricomarché Le Magny 
                  </div>`,
@@ -460,43 +438,38 @@
             );
         
     
-            var marker_c9381dcd6d05d78abe522695dcd63975 = L.marker(
+            var marker_9e53cc01332831517b3338b8c293f67b = L.marker(
                 [45.7499899, 3.0851773930156634],
                 {
 }
-            ).addTo(map_acdecab74db57e4844308077f2f170d8);
+            ).addTo(map_6921c71aea8d47cf6a2739d4a2acdb77);
         
     
-            var icon_6ad054396c13bee94036766c9c893b29 = L.AwesomeMarkers.icon(
-                {
-  "markerColor": "blue",
-  "iconColor": "white",
-  "icon": "info-sign",
-  "prefix": "glyphicon",
-  "extraClasses": "fa-rotate-0",
-}
-            );
-            marker_c9381dcd6d05d78abe522695dcd63975.setIcon(icon_6ad054396c13bee94036766c9c893b29);
+            var div_icon_1707f7543960329e10d6aa1596d5d4f8 = L.divIcon({
+  "html": "\n                    \u003cdiv style=\"\n                        display: flex;\n                        align-items: center;\n                        justify-content: center;\n                        width: 30px;\n                        height: 30px;\n                        border: 4px solid white; \n                        background-color: blue; \n                        color: white; \n                        border-radius: 50%; \n                        font-size: 12px; \n                        font-weight: bold;\"\u003e\n                        5.0\n                    \u003c/div\u003e\n                    ",
+  "className": "empty",
+});
+            marker_9e53cc01332831517b3338b8c293f67b.setIcon(div_icon_1707f7543960329e10d6aa1596d5d4f8);
         
     
-        var popup_c1f82e4fefff6538a1ec3f28dc93d184 = L.popup({
-  "maxWidth": "100%",
+        var popup_3ea0f42dd088992d4eae4ddab77157f7 = L.popup({
+  "maxWidth": 400,
 });
 
         
             
-                var html_696dce700b2634ae779e02bf469b5f3b = $(`<div id="html_696dce700b2634ae779e02bf469b5f3b" style="width: 100.0%; height: 100.0%;"><b>Bricorama Beaumont / EBB</b><br>Pole Commercial Champs Madame 63110 BEAUMONT<br>Code Postal: 63110<br>Type: vt</div>`)[0];
-                popup_c1f82e4fefff6538a1ec3f28dc93d184.setContent(html_696dce700b2634ae779e02bf469b5f3b);
+                var html_2c700acd3be5dd73e6235e611c05634d = $(`<div id="html_2c700acd3be5dd73e6235e611c05634d" style="width: 100.0%; height: 100.0%;"><b>Bricorama Beaumont / EBB</b><br>Pole Commercial Champs Madame 63110 BEAUMONT<br>Code Postal: 63110<br>Date planifié: nan<br>Responsable: nan<br>Detail: </div>`)[0];
+                popup_3ea0f42dd088992d4eae4ddab77157f7.setContent(html_2c700acd3be5dd73e6235e611c05634d);
             
         
 
-        marker_c9381dcd6d05d78abe522695dcd63975.bindPopup(popup_c1f82e4fefff6538a1ec3f28dc93d184)
+        marker_9e53cc01332831517b3338b8c293f67b.bindPopup(popup_3ea0f42dd088992d4eae4ddab77157f7)
         ;
 
         
     
     
-            marker_c9381dcd6d05d78abe522695dcd63975.bindTooltip(
+            marker_9e53cc01332831517b3338b8c293f67b.bindTooltip(
                 `<div>
                      Bricorama Beaumont / EBB
                  </div>`,
@@ -506,43 +479,38 @@
             );
         
     
-            var marker_73024ef7853763bfb5803cdddbb3beec = L.marker(
+            var marker_566d468e88bd69a32c69f4a7de716d15 = L.marker(
                 [45.553143505821346, 3.2620727143156834],
                 {
 }
-            ).addTo(map_acdecab74db57e4844308077f2f170d8);
+            ).addTo(map_6921c71aea8d47cf6a2739d4a2acdb77);
         
     
-            var icon_9515091aaa46ed5728cc3447e36a1add = L.AwesomeMarkers.icon(
-                {
-  "markerColor": "blue",
-  "iconColor": "white",
-  "icon": "info-sign",
-  "prefix": "glyphicon",
-  "extraClasses": "fa-rotate-0",
-}
-            );
-            marker_73024ef7853763bfb5803cdddbb3beec.setIcon(icon_9515091aaa46ed5728cc3447e36a1add);
+            var div_icon_8ba67132ff5afb267d0e02b7dc3ea997 = L.divIcon({
+  "html": "\n                    \u003cdiv style=\"\n                        display: flex;\n                        align-items: center;\n                        justify-content: center;\n                        width: 30px;\n                        height: 30px;\n                        border: 4px solid white; \n                        background-color: blue; \n                        color: white; \n                        border-radius: 50%; \n                        font-size: 12px; \n                        font-weight: bold;\"\u003e\n                        6.0\n                    \u003c/div\u003e\n                    ",
+  "className": "empty",
+});
+            marker_566d468e88bd69a32c69f4a7de716d15.setIcon(div_icon_8ba67132ff5afb267d0e02b7dc3ea997);
         
     
-        var popup_dfa4a80b6bc89e6d3f0f7c192e2e3dab = L.popup({
-  "maxWidth": "100%",
+        var popup_6969520725b52115ceaa4e24f77c1c5e = L.popup({
+  "maxWidth": 400,
 });
 
         
             
-                var html_d9445f623b488763789bed1273d15783 = $(`<div id="html_d9445f623b488763789bed1273d15783" style="width: 100.0%; height: 100.0%;"><b>Bricorama Issoire / EBI</b><br>1 rue Pierre Antoine Rouvet 63500 ISSOIRE <br>Code Postal: 63500<br>Type: vt</div>`)[0];
-                popup_dfa4a80b6bc89e6d3f0f7c192e2e3dab.setContent(html_d9445f623b488763789bed1273d15783);
+                var html_6629781fd36eaf6138168a36805e7213 = $(`<div id="html_6629781fd36eaf6138168a36805e7213" style="width: 100.0%; height: 100.0%;"><b>Bricorama Issoire / EBI</b><br>1 rue Pierre Antoine Rouvet 63500 ISSOIRE <br>Code Postal: 63500<br>Date planifié: nan<br>Responsable: nan<br>Detail: </div>`)[0];
+                popup_6969520725b52115ceaa4e24f77c1c5e.setContent(html_6629781fd36eaf6138168a36805e7213);
             
         
 
-        marker_73024ef7853763bfb5803cdddbb3beec.bindPopup(popup_dfa4a80b6bc89e6d3f0f7c192e2e3dab)
+        marker_566d468e88bd69a32c69f4a7de716d15.bindPopup(popup_6969520725b52115ceaa4e24f77c1c5e)
         ;
 
         
     
     
-            marker_73024ef7853763bfb5803cdddbb3beec.bindTooltip(
+            marker_566d468e88bd69a32c69f4a7de716d15.bindTooltip(
                 `<div>
                      Bricorama Issoire / EBI
                  </div>`,
@@ -552,43 +520,38 @@
             );
         
     
-            var marker_aa098e6fad9bcd50c9a4059de8935fea = L.marker(
+            var marker_05c150a920df255d4deefd4c40ca356d = L.marker(
                 [47.2860792, 5.0099712],
                 {
 }
-            ).addTo(map_acdecab74db57e4844308077f2f170d8);
+            ).addTo(map_6921c71aea8d47cf6a2739d4a2acdb77);
         
     
-            var icon_1ace12a2f069b0cca78c579d4d0fcd1d = L.AwesomeMarkers.icon(
-                {
-  "markerColor": "blue",
-  "iconColor": "white",
-  "icon": "info-sign",
-  "prefix": "glyphicon",
-  "extraClasses": "fa-rotate-0",
-}
-            );
-            marker_aa098e6fad9bcd50c9a4059de8935fea.setIcon(icon_1ace12a2f069b0cca78c579d4d0fcd1d);
+            var div_icon_00f93e8fa2a21c9876ce402435164933 = L.divIcon({
+  "html": "\n                    \u003cdiv style=\"\n                        display: flex;\n                        align-items: center;\n                        justify-content: center;\n                        width: 30px;\n                        height: 30px;\n                        border: 4px solid white; \n                        background-color: blue; \n                        color: white; \n                        border-radius: 50%; \n                        font-size: 12px; \n                        font-weight: bold;\"\u003e\n                        7.0\n                    \u003c/div\u003e\n                    ",
+  "className": "empty",
+});
+            marker_05c150a920df255d4deefd4c40ca356d.setIcon(div_icon_00f93e8fa2a21c9876ce402435164933);
         
     
-        var popup_e36f084f52824a84b928c748cfce64a9 = L.popup({
-  "maxWidth": "100%",
+        var popup_1f20eb631b46b53a14a9927bc40ec52b = L.popup({
+  "maxWidth": 400,
 });
 
         
             
-                var html_13e0c19036854d6e5c0bb6aacd82c092 = $(`<div id="html_13e0c19036854d6e5c0bb6aacd82c092" style="width: 100.0%; height: 100.0%;"><b>Super U Chenove </b><br>37 avenue du 14 Juillet 21300 CHENOVE<br>Code Postal: 21300<br>Type: vt</div>`)[0];
-                popup_e36f084f52824a84b928c748cfce64a9.setContent(html_13e0c19036854d6e5c0bb6aacd82c092);
+                var html_5f9056aa33fb01b3285c2abaf538ffe5 = $(`<div id="html_5f9056aa33fb01b3285c2abaf538ffe5" style="width: 100.0%; height: 100.0%;"><b>Super U Chenove </b><br>37 avenue du 14 Juillet 21300 CHENOVE<br>Code Postal: 21300<br>Date planifié: nan<br>Responsable: nan<br>Detail: </div>`)[0];
+                popup_1f20eb631b46b53a14a9927bc40ec52b.setContent(html_5f9056aa33fb01b3285c2abaf538ffe5);
             
         
 
-        marker_aa098e6fad9bcd50c9a4059de8935fea.bindPopup(popup_e36f084f52824a84b928c748cfce64a9)
+        marker_05c150a920df255d4deefd4c40ca356d.bindPopup(popup_1f20eb631b46b53a14a9927bc40ec52b)
         ;
 
         
     
     
-            marker_aa098e6fad9bcd50c9a4059de8935fea.bindTooltip(
+            marker_05c150a920df255d4deefd4c40ca356d.bindTooltip(
                 `<div>
                      Super U Chenove 
                  </div>`,
@@ -598,43 +561,120 @@
             );
         
     
-            var marker_c4e6660eff7c02deffbbaf812c068b12 = L.marker(
-                [46.72420295, 2.46437678051535],
+            var marker_1fa1cc07d2eaf469898f5c7ae8f29a16 = L.marker(
+                [45.259840249999996, 4.722503511124413],
                 {
 }
-            ).addTo(map_acdecab74db57e4844308077f2f170d8);
+            ).addTo(map_6921c71aea8d47cf6a2739d4a2acdb77);
         
     
-            var icon_e0c3875433ab09df0cb78adcdc7d9a6e = L.AwesomeMarkers.icon(
-                {
-  "markerColor": "red",
-  "iconColor": "white",
-  "icon": "info-sign",
-  "prefix": "glyphicon",
-  "extraClasses": "fa-rotate-0",
-}
-            );
-            marker_c4e6660eff7c02deffbbaf812c068b12.setIcon(icon_e0c3875433ab09df0cb78adcdc7d9a6e);
+            var div_icon_97bf1f068a668e4bdb2bb8d5d1c90bc4 = L.divIcon({
+  "html": "\n                    \u003cdiv style=\"\n                        display: flex;\n                        align-items: center;\n                        justify-content: center;\n                        width: 30px;\n                        height: 30px;\n                        border: 4px solid white; \n                        background-color: red; \n                        color: white; \n                        border-radius: 50%; \n                        font-size: 12px; \n                        font-weight: bold;\"\u003e\n                        \n                    \u003c/div\u003e\n                    ",
+  "className": "empty",
+});
+            marker_1fa1cc07d2eaf469898f5c7ae8f29a16.setIcon(div_icon_97bf1f068a668e4bdb2bb8d5d1c90bc4);
         
     
-        var popup_2813773b802bcf47b267aecf5ef775c0 = L.popup({
-  "maxWidth": "100%",
+        var popup_8ae57bae378cafce91167e6f390f6cd8 = L.popup({
+  "maxWidth": 400,
 });
 
         
             
-                var html_c5bbfbdaeafbf70eee239af88982884c = $(`<div id="html_c5bbfbdaeafbf70eee239af88982884c" style="width: 100.0%; height: 100.0%;"><b>Bricomarché Orval </b><br>LD les noix brulées 18200 ORVAL<br>Code Postal: 18200<br>Type: probleme</div>`)[0];
-                popup_2813773b802bcf47b267aecf5ef775c0.setContent(html_c5bbfbdaeafbf70eee239af88982884c);
+                var html_d329eaab8aa47bd77e9529dc00d0f84a = $(`<div id="html_d329eaab8aa47bd77e9529dc00d0f84a" style="width: 100.0%; height: 100.0%;"><b>Mr Bricolage</b><br>ZA LE MAS 07430 DAVEYZIEUX <br>Code Postal: 07430<br>Date planifié: nan<br>Responsable: nan<br>Detail: D08 deconne </div>`)[0];
+                popup_8ae57bae378cafce91167e6f390f6cd8.setContent(html_d329eaab8aa47bd77e9529dc00d0f84a);
             
         
 
-        marker_c4e6660eff7c02deffbbaf812c068b12.bindPopup(popup_2813773b802bcf47b267aecf5ef775c0)
+        marker_1fa1cc07d2eaf469898f5c7ae8f29a16.bindPopup(popup_8ae57bae378cafce91167e6f390f6cd8)
         ;
 
         
     
     
-            marker_c4e6660eff7c02deffbbaf812c068b12.bindTooltip(
+            marker_1fa1cc07d2eaf469898f5c7ae8f29a16.bindTooltip(
+                `<div>
+                     Mr Bricolage
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_eec625e3158a282e6509a36c879e38e5 = L.marker(
+                [45.325522050000004, 4.809378441720779],
+                {
+}
+            ).addTo(map_6921c71aea8d47cf6a2739d4a2acdb77);
+        
+    
+            var div_icon_ba3187bd16ba06eaefe7b347bdfc76e5 = L.divIcon({
+  "html": "\n                    \u003cdiv style=\"\n                        display: flex;\n                        align-items: center;\n                        justify-content: center;\n                        width: 30px;\n                        height: 30px;\n                        border: 4px solid white; \n                        background-color: red; \n                        color: white; \n                        border-radius: 50%; \n                        font-size: 12px; \n                        font-weight: bold;\"\u003e\n                        \n                    \u003c/div\u003e\n                    ",
+  "className": "empty",
+});
+            marker_eec625e3158a282e6509a36c879e38e5.setIcon(div_icon_ba3187bd16ba06eaefe7b347bdfc76e5);
+        
+    
+        var popup_a927fa26a285d31edba013528475116b = L.popup({
+  "maxWidth": 400,
+});
+
+        
+            
+                var html_07d4c511dc0781d49d786dbce96a94d2 = $(`<div id="html_07d4c511dc0781d49d786dbce96a94d2" style="width: 100.0%; height: 100.0%;"><b>BricoCash</b><br>RN 7 PARC DU SOLEIL 38150 CHANAS <br>Code Postal: 38150<br>Date planifié: nan<br>Responsable: nan<br>Detail: Manque d’un point d’éclairage au fond du magasin, piloté par un interrupteur.Demande d’installation d’une sonde crépusculaire pour l'exterieur(fonctionnement en fonction de la luminosité).Manque un aérotherme à raccorder.</div>`)[0];
+                popup_a927fa26a285d31edba013528475116b.setContent(html_07d4c511dc0781d49d786dbce96a94d2);
+            
+        
+
+        marker_eec625e3158a282e6509a36c879e38e5.bindPopup(popup_a927fa26a285d31edba013528475116b)
+        ;
+
+        
+    
+    
+            marker_eec625e3158a282e6509a36c879e38e5.bindTooltip(
+                `<div>
+                     BricoCash
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_6c8284261c73613948f6673bd9e9bacc = L.marker(
+                [46.72420295, 2.46437678051535],
+                {
+}
+            ).addTo(map_6921c71aea8d47cf6a2739d4a2acdb77);
+        
+    
+            var div_icon_e9896e3d5630bbd65689abeaae5b864f = L.divIcon({
+  "html": "\n                    \u003cdiv style=\"\n                        display: flex;\n                        align-items: center;\n                        justify-content: center;\n                        width: 30px;\n                        height: 30px;\n                        border: 4px solid white; \n                        background-color: red; \n                        color: white; \n                        border-radius: 50%; \n                        font-size: 12px; \n                        font-weight: bold;\"\u003e\n                        \n                    \u003c/div\u003e\n                    ",
+  "className": "empty",
+});
+            marker_6c8284261c73613948f6673bd9e9bacc.setIcon(div_icon_e9896e3d5630bbd65689abeaae5b864f);
+        
+    
+        var popup_e4b96e15398913b5847e56b5cd45bd45 = L.popup({
+  "maxWidth": 400,
+});
+
+        
+            
+                var html_d559cc3ddfa23d0a73c858d492257f5f = $(`<div id="html_d559cc3ddfa23d0a73c858d492257f5f" style="width: 100.0%; height: 100.0%;"><b>Bricomarché Orval </b><br>LD les noix brulées 18200 ORVAL<br>Code Postal: 18200<br>Date planifié: nan<br>Responsable: nan<br>Detail: Souhait d’installation d’un compteur gaz.Envoi prévu de photos de son compteur par le client. Fournisseur identifié : SEFE.Problème avec un DO8 défectueux, demande d’intervention pour remplacement.</div>`)[0];
+                popup_e4b96e15398913b5847e56b5cd45bd45.setContent(html_d559cc3ddfa23d0a73c858d492257f5f);
+            
+        
+
+        marker_6c8284261c73613948f6673bd9e9bacc.bindPopup(popup_e4b96e15398913b5847e56b5cd45bd45)
+        ;
+
+        
+    
+    
+            marker_6c8284261c73613948f6673bd9e9bacc.bindTooltip(
                 `<div>
                      Bricomarché Orval 
                  </div>`,
@@ -644,43 +684,38 @@
             );
         
     
-            var marker_bbfa9979ab3cc1837e8bfe4cac404735 = L.marker(
+            var marker_09a847ba70858f27e9ad15fe3e9ff282 = L.marker(
                 [43.1641551, 2.809254913874221],
                 {
 }
-            ).addTo(map_acdecab74db57e4844308077f2f170d8);
+            ).addTo(map_6921c71aea8d47cf6a2739d4a2acdb77);
         
     
-            var icon_62b81f22867561ec5381462c0ceb7cb0 = L.AwesomeMarkers.icon(
-                {
-  "markerColor": "red",
-  "iconColor": "white",
-  "icon": "info-sign",
-  "prefix": "glyphicon",
-  "extraClasses": "fa-rotate-0",
-}
-            );
-            marker_bbfa9979ab3cc1837e8bfe4cac404735.setIcon(icon_62b81f22867561ec5381462c0ceb7cb0);
+            var div_icon_5fde520da01e3c1259cba95fec3570e6 = L.divIcon({
+  "html": "\n                    \u003cdiv style=\"\n                        display: flex;\n                        align-items: center;\n                        justify-content: center;\n                        width: 30px;\n                        height: 30px;\n                        border: 4px solid white; \n                        background-color: red; \n                        color: white; \n                        border-radius: 50%; \n                        font-size: 12px; \n                        font-weight: bold;\"\u003e\n                        \n                    \u003c/div\u003e\n                    ",
+  "className": "empty",
+});
+            marker_09a847ba70858f27e9ad15fe3e9ff282.setIcon(div_icon_5fde520da01e3c1259cba95fec3570e6);
         
     
-        var popup_ec60f8522bad7b0f6ba788b1d487508a = L.popup({
-  "maxWidth": "100%",
+        var popup_1bb6deaa3433b4f8a1e619555f7907ff = L.popup({
+  "maxWidth": 400,
 });
 
         
             
-                var html_345631feae3729b8bb9b91848181c522 = $(`<div id="html_345631feae3729b8bb9b91848181c522" style="width: 100.0%; height: 100.0%;"><b>Bricomarché Lezignan-Corbières</b><br>ZI de Vitrac - rue Alfred Nobel 11200 LEZIGNAN-CORBIERES<br>Code Postal: 11200<br>Type: probleme</div>`)[0];
-                popup_ec60f8522bad7b0f6ba788b1d487508a.setContent(html_345631feae3729b8bb9b91848181c522);
+                var html_e23136df6bb80f9520a12f2967df9760 = $(`<div id="html_e23136df6bb80f9520a12f2967df9760" style="width: 100.0%; height: 100.0%;"><b>Bricomarché Lezignan-Corbières</b><br>ZI de Vitrac - rue Alfred Nobel 11200 LEZIGNAN-CORBIERES<br>Code Postal: 11200<br>Date planifié: nan<br>Responsable: nan<br>Detail: </div>`)[0];
+                popup_1bb6deaa3433b4f8a1e619555f7907ff.setContent(html_e23136df6bb80f9520a12f2967df9760);
             
         
 
-        marker_bbfa9979ab3cc1837e8bfe4cac404735.bindPopup(popup_ec60f8522bad7b0f6ba788b1d487508a)
+        marker_09a847ba70858f27e9ad15fe3e9ff282.bindPopup(popup_1bb6deaa3433b4f8a1e619555f7907ff)
         ;
 
         
     
     
-            marker_bbfa9979ab3cc1837e8bfe4cac404735.bindTooltip(
+            marker_09a847ba70858f27e9ad15fe3e9ff282.bindTooltip(
                 `<div>
                      Bricomarché Lezignan-Corbières
                  </div>`,
@@ -690,45 +725,40 @@
             );
         
     
-            var marker_ab3598083782ab13fe6e20a83a76f7e1 = L.marker(
-                [43.17778355, 3.028377645045972],
+            var marker_8b81660b44b17724edf60c5e1ca572e2 = L.marker(
+                [48.074163999999996, 1.3498598699460993],
                 {
 }
-            ).addTo(map_acdecab74db57e4844308077f2f170d8);
+            ).addTo(map_6921c71aea8d47cf6a2739d4a2acdb77);
         
     
-            var icon_0c918e5f0346ca2bbb768885a10d573c = L.AwesomeMarkers.icon(
-                {
-  "markerColor": "red",
-  "iconColor": "white",
-  "icon": "info-sign",
-  "prefix": "glyphicon",
-  "extraClasses": "fa-rotate-0",
-}
-            );
-            marker_ab3598083782ab13fe6e20a83a76f7e1.setIcon(icon_0c918e5f0346ca2bbb768885a10d573c);
+            var div_icon_50da0c569076609a1880515c9b5152e7 = L.divIcon({
+  "html": "\n                    \u003cdiv style=\"\n                        display: flex;\n                        align-items: center;\n                        justify-content: center;\n                        width: 30px;\n                        height: 30px;\n                        border: 4px solid white; \n                        background-color: red; \n                        color: white; \n                        border-radius: 50%; \n                        font-size: 12px; \n                        font-weight: bold;\"\u003e\n                        \n                    \u003c/div\u003e\n                    ",
+  "className": "empty",
+});
+            marker_8b81660b44b17724edf60c5e1ca572e2.setIcon(div_icon_50da0c569076609a1880515c9b5152e7);
         
     
-        var popup_ecddcf7a85e6f055f59ed535a23a1d06 = L.popup({
-  "maxWidth": "100%",
+        var popup_5d23a58db03975f1e2ff46163dc2ef0e = L.popup({
+  "maxWidth": 400,
 });
 
         
             
-                var html_c15e713a63dfc4529efbc81dca0194d8 = $(`<div id="html_c15e713a63dfc4529efbc81dca0194d8" style="width: 100.0%; height: 100.0%;"><b>Tridome Jardinerie </b><br>ZAC Bonne Source 11100 NARBONNE<br>Code Postal: 11100<br>Type: probleme</div>`)[0];
-                popup_ecddcf7a85e6f055f59ed535a23a1d06.setContent(html_c15e713a63dfc4529efbc81dca0194d8);
+                var html_f19411c259c8af4f5dcaf08a79c222e2 = $(`<div id="html_f19411c259c8af4f5dcaf08a79c222e2" style="width: 100.0%; height: 100.0%;"><b>Intermarché Chateaudun </b><br>Centre Commercial Terres la nouvelle Garenne 28200 CHATEAUDUN<br>Code Postal: 28200<br>Date planifié: nan<br>Responsable: nan<br>Detail: Éclairage à reprendre.</div>`)[0];
+                popup_5d23a58db03975f1e2ff46163dc2ef0e.setContent(html_f19411c259c8af4f5dcaf08a79c222e2);
             
         
 
-        marker_ab3598083782ab13fe6e20a83a76f7e1.bindPopup(popup_ecddcf7a85e6f055f59ed535a23a1d06)
+        marker_8b81660b44b17724edf60c5e1ca572e2.bindPopup(popup_5d23a58db03975f1e2ff46163dc2ef0e)
         ;
 
         
     
     
-            marker_ab3598083782ab13fe6e20a83a76f7e1.bindTooltip(
+            marker_8b81660b44b17724edf60c5e1ca572e2.bindTooltip(
                 `<div>
-                     Tridome Jardinerie 
+                     Intermarché Chateaudun 
                  </div>`,
                 {
   "sticky": true,
@@ -736,45 +766,40 @@
             );
         
     
-            var marker_4ecde48418ed477f9998ff783fb10965 = L.marker(
-                [43.1494468, 3.003542703983693],
+            var marker_5200ba8252b148016bd1b5c960652a1e = L.marker(
+                [48.104164, 1.3798598699460993],
                 {
 }
-            ).addTo(map_acdecab74db57e4844308077f2f170d8);
+            ).addTo(map_6921c71aea8d47cf6a2739d4a2acdb77);
         
     
-            var icon_7174e3b6df57536a3190352457d9cd7c = L.AwesomeMarkers.icon(
-                {
-  "markerColor": "red",
-  "iconColor": "white",
-  "icon": "info-sign",
-  "prefix": "glyphicon",
-  "extraClasses": "fa-rotate-0",
-}
-            );
-            marker_4ecde48418ed477f9998ff783fb10965.setIcon(icon_7174e3b6df57536a3190352457d9cd7c);
+            var div_icon_17b2da91286db63a380a1fb946944874 = L.divIcon({
+  "html": "\n                    \u003cdiv style=\"\n                        display: flex;\n                        align-items: center;\n                        justify-content: center;\n                        width: 30px;\n                        height: 30px;\n                        border: 4px solid white; \n                        background-color: red; \n                        color: white; \n                        border-radius: 50%; \n                        font-size: 12px; \n                        font-weight: bold;\"\u003e\n                        \n                    \u003c/div\u003e\n                    ",
+  "className": "empty",
+});
+            marker_5200ba8252b148016bd1b5c960652a1e.setIcon(div_icon_17b2da91286db63a380a1fb946944874);
         
     
-        var popup_e60ff44060c7b26c316585d0ef2b0c33 = L.popup({
-  "maxWidth": "100%",
+        var popup_c1c7e8e11eecd52273d54ca8ef887bde = L.popup({
+  "maxWidth": 400,
 });
 
         
             
-                var html_2a3673626ba02b9426a809909ab11c43 = $(`<div id="html_2a3673626ba02b9426a809909ab11c43" style="width: 100.0%; height: 100.0%;"><b>Tridome </b><br>ZAC Bonne Source - 52 boulevard de Creissel 11100 NARBONNE<br>Code Postal: 11100<br>Type: probleme</div>`)[0];
-                popup_e60ff44060c7b26c316585d0ef2b0c33.setContent(html_2a3673626ba02b9426a809909ab11c43);
+                var html_ceadaca5a157c83522553b418061e946 = $(`<div id="html_ceadaca5a157c83522553b418061e946" style="width: 100.0%; height: 100.0%;"><b>Bricomarché Chateaudun</b><br>Centre Commercial Terres la nouvelle Garenne 28200 CHATEAUDUN<br>Code Postal: 28200<br>Date planifié: nan<br>Responsable: nan<br>Detail: Deux aérothermes en fil pilote défectueux</div>`)[0];
+                popup_c1c7e8e11eecd52273d54ca8ef887bde.setContent(html_ceadaca5a157c83522553b418061e946);
             
         
 
-        marker_4ecde48418ed477f9998ff783fb10965.bindPopup(popup_e60ff44060c7b26c316585d0ef2b0c33)
+        marker_5200ba8252b148016bd1b5c960652a1e.bindPopup(popup_c1c7e8e11eecd52273d54ca8ef887bde)
         ;
 
         
     
     
-            marker_4ecde48418ed477f9998ff783fb10965.bindTooltip(
+            marker_5200ba8252b148016bd1b5c960652a1e.bindTooltip(
                 `<div>
-                     Tridome 
+                     Bricomarché Chateaudun
                  </div>`,
                 {
   "sticky": true,
@@ -782,45 +807,245 @@
             );
         
     
-            var marker_00125b9e750f1271ca896c4f995c485f = L.marker(
-                [43.2077173, 2.339968564221219],
+            var marker_8f66906220f0a7c34aeab23054501ec0 = L.marker(
+                [46.139705552804315, 6.0672339192279],
                 {
 }
-            ).addTo(map_acdecab74db57e4844308077f2f170d8);
+            ).addTo(map_6921c71aea8d47cf6a2739d4a2acdb77);
         
     
-            var icon_12484341b4c56d7d7481ac4f9ecefaea = L.AwesomeMarkers.icon(
-                {
-  "markerColor": "red",
-  "iconColor": "white",
-  "icon": "info-sign",
-  "prefix": "glyphicon",
-  "extraClasses": "fa-rotate-0",
-}
-            );
-            marker_00125b9e750f1271ca896c4f995c485f.setIcon(icon_12484341b4c56d7d7481ac4f9ecefaea);
+            var div_icon_60bc0683e0926ed7f59a8ba80ad9502d = L.divIcon({
+  "html": "\n                    \u003cdiv style=\"\n                        display: flex;\n                        align-items: center;\n                        justify-content: center;\n                        width: 30px;\n                        height: 30px;\n                        border: 4px solid white; \n                        background-color: red; \n                        color: white; \n                        border-radius: 50%; \n                        font-size: 12px; \n                        font-weight: bold;\"\u003e\n                        \n                    \u003c/div\u003e\n                    ",
+  "className": "empty",
+});
+            marker_8f66906220f0a7c34aeab23054501ec0.setIcon(div_icon_60bc0683e0926ed7f59a8ba80ad9502d);
         
     
-        var popup_2f9321daf85bb3ab7dfe2985e9e91cda = L.popup({
-  "maxWidth": "100%",
+        var popup_8bcc523d7f2b6655bbedd3315d043ba3 = L.popup({
+  "maxWidth": 400,
 });
 
         
             
-                var html_62291af53b6f15daab9ff6687087124c = $(`<div id="html_62291af53b6f15daab9ff6687087124c" style="width: 100.0%; height: 100.0%;"><b>Intermarché Carcassonne</b><br>ZA St Jean de l'Arnouze - rue Claude Chappe 11000 CARCASSONNE<br>Code Postal: 11000<br>Type: probleme</div>`)[0];
-                popup_2f9321daf85bb3ab7dfe2985e9e91cda.setContent(html_62291af53b6f15daab9ff6687087124c);
+                var html_311203a0f093551518531a391425a09f = $(`<div id="html_311203a0f093551518531a391425a09f" style="width: 100.0%; height: 100.0%;"><b>Intermarché St Julien en Genevois </b><br>Route des vignes 74160 ST JULIEN EN GENEVOIS <br>Code Postal: 74160<br>Date planifié: nan<br>Responsable: nan<br>Detail: Pascal doit debloquer</div>`)[0];
+                popup_8bcc523d7f2b6655bbedd3315d043ba3.setContent(html_311203a0f093551518531a391425a09f);
             
         
 
-        marker_00125b9e750f1271ca896c4f995c485f.bindPopup(popup_2f9321daf85bb3ab7dfe2985e9e91cda)
+        marker_8f66906220f0a7c34aeab23054501ec0.bindPopup(popup_8bcc523d7f2b6655bbedd3315d043ba3)
         ;
 
         
     
     
-            marker_00125b9e750f1271ca896c4f995c485f.bindTooltip(
+            marker_8f66906220f0a7c34aeab23054501ec0.bindTooltip(
                 `<div>
-                     Intermarché Carcassonne
+                     Intermarché St Julien en Genevois 
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_35912aceffdae91cb795dd1cf2f561fb = L.marker(
+                [46.071375599999996, 6.324877338888892],
+                {
+}
+            ).addTo(map_6921c71aea8d47cf6a2739d4a2acdb77);
+        
+    
+            var div_icon_1b17ce2067eff815b6a79dc153d55726 = L.divIcon({
+  "html": "\n                    \u003cdiv style=\"\n                        display: flex;\n                        align-items: center;\n                        justify-content: center;\n                        width: 30px;\n                        height: 30px;\n                        border: 4px solid white; \n                        background-color: blue; \n                        color: white; \n                        border-radius: 50%; \n                        font-size: 12px; \n                        font-weight: bold;\"\u003e\n                        \n                    \u003c/div\u003e\n                    ",
+  "className": "empty",
+});
+            marker_35912aceffdae91cb795dd1cf2f561fb.setIcon(div_icon_1b17ce2067eff815b6a79dc153d55726);
+        
+    
+        var popup_bd6b23926e298ee650c4cc7eaf050977 = L.popup({
+  "maxWidth": 400,
+});
+
+        
+            
+                var html_54063075ec83ea1e1aeb68ff78411de8 = $(`<div id="html_54063075ec83ea1e1aeb68ff78411de8" style="width: 100.0%; height: 100.0%;"><b>Intermarche Amancy</b><br>65 impasse des champs 74800 AMANCY<br>Code Postal: 74800<br>Date planifié: nan<br>Responsable: nan<br>Detail: </div>`)[0];
+                popup_bd6b23926e298ee650c4cc7eaf050977.setContent(html_54063075ec83ea1e1aeb68ff78411de8);
+            
+        
+
+        marker_35912aceffdae91cb795dd1cf2f561fb.bindPopup(popup_bd6b23926e298ee650c4cc7eaf050977)
+        ;
+
+        
+    
+    
+            marker_35912aceffdae91cb795dd1cf2f561fb.bindTooltip(
+                `<div>
+                     Intermarche Amancy
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_f1d421f61e81c8eca16bfb2cbea93a36 = L.marker(
+                [45.08080655, 5.556107387815137],
+                {
+}
+            ).addTo(map_6921c71aea8d47cf6a2739d4a2acdb77);
+        
+    
+            var div_icon_be9bedfebac6df1c655a99da87b927a8 = L.divIcon({
+  "html": "\n                    \u003cdiv style=\"\n                        display: flex;\n                        align-items: center;\n                        justify-content: center;\n                        width: 30px;\n                        height: 30px;\n                        border: 4px solid white; \n                        background-color: red; \n                        color: white; \n                        border-radius: 50%; \n                        font-size: 12px; \n                        font-weight: bold;\"\u003e\n                        \n                    \u003c/div\u003e\n                    ",
+  "className": "empty",
+});
+            marker_f1d421f61e81c8eca16bfb2cbea93a36.setIcon(div_icon_be9bedfebac6df1c655a99da87b927a8);
+        
+    
+        var popup_dd80f574c30397911b610c049e874977 = L.popup({
+  "maxWidth": 400,
+});
+
+        
+            
+                var html_58c2be7fe4025ce07050cb7f5d2927fc = $(`<div id="html_58c2be7fe4025ce07050cb7f5d2927fc" style="width: 100.0%; height: 100.0%;"><b>Bricomarché Villard-de-Lans</b><br>ZA Les Geymonds Rue des Machurons 38250 VILLARD-DE-LANS<br>Code Postal: 38250<br>Date planifié: nan<br>Responsable: nan<br>Detail: aero qui deconne en attente de solaronics pour une date</div>`)[0];
+                popup_dd80f574c30397911b610c049e874977.setContent(html_58c2be7fe4025ce07050cb7f5d2927fc);
+            
+        
+
+        marker_f1d421f61e81c8eca16bfb2cbea93a36.bindPopup(popup_dd80f574c30397911b610c049e874977)
+        ;
+
+        
+    
+    
+            marker_f1d421f61e81c8eca16bfb2cbea93a36.bindTooltip(
+                `<div>
+                     Bricomarché Villard-de-Lans
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_bd88344c6b39d1aae2261ee76bda7d8c = L.marker(
+                [46.1232198, 6.267379001628868],
+                {
+}
+            ).addTo(map_6921c71aea8d47cf6a2739d4a2acdb77);
+        
+    
+            var div_icon_0deafbf0512ec08650ef69f3c39a8878 = L.divIcon({
+  "html": "\n                    \u003cdiv style=\"\n                        display: flex;\n                        align-items: center;\n                        justify-content: center;\n                        width: 30px;\n                        height: 30px;\n                        border: 4px solid white; \n                        background-color: blue; \n                        color: white; \n                        border-radius: 50%; \n                        font-size: 12px; \n                        font-weight: bold;\"\u003e\n                        \n                    \u003c/div\u003e\n                    ",
+  "className": "empty",
+});
+            marker_bd88344c6b39d1aae2261ee76bda7d8c.setIcon(div_icon_0deafbf0512ec08650ef69f3c39a8878);
+        
+    
+        var popup_a7c2b6f0629b6754d62a68dc6ae17a32 = L.popup({
+  "maxWidth": 400,
+});
+
+        
+            
+                var html_2d7319711aa4c363b3ca5071f573ee36 = $(`<div id="html_2d7319711aa4c363b3ca5071f573ee36" style="width: 100.0%; height: 100.0%;"><b>Intermarché Pers Jussy </b><br>240 Impasse des Contamines 74930 PERS JUSSY <br>Code Postal: 74930<br>Date planifié: nan<br>Responsable: nan<br>Detail: </div>`)[0];
+                popup_a7c2b6f0629b6754d62a68dc6ae17a32.setContent(html_2d7319711aa4c363b3ca5071f573ee36);
+            
+        
+
+        marker_bd88344c6b39d1aae2261ee76bda7d8c.bindPopup(popup_a7c2b6f0629b6754d62a68dc6ae17a32)
+        ;
+
+        
+    
+    
+            marker_bd88344c6b39d1aae2261ee76bda7d8c.bindTooltip(
+                `<div>
+                     Intermarché Pers Jussy 
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_be4efb1650a3f1079b22c2d7e47a104d = L.marker(
+                [46.07188113526622, 6.325252228214358],
+                {
+}
+            ).addTo(map_6921c71aea8d47cf6a2739d4a2acdb77);
+        
+    
+            var div_icon_f6ced718719555b60e3572d3a1f9ef59 = L.divIcon({
+  "html": "\n                    \u003cdiv style=\"\n                        display: flex;\n                        align-items: center;\n                        justify-content: center;\n                        width: 30px;\n                        height: 30px;\n                        border: 4px solid white; \n                        background-color: blue; \n                        color: white; \n                        border-radius: 50%; \n                        font-size: 12px; \n                        font-weight: bold;\"\u003e\n                        \n                    \u003c/div\u003e\n                    ",
+  "className": "empty",
+});
+            marker_be4efb1650a3f1079b22c2d7e47a104d.setIcon(div_icon_f6ced718719555b60e3572d3a1f9ef59);
+        
+    
+        var popup_517880a2118e841928d8d7684c7e9dcb = L.popup({
+  "maxWidth": 400,
+});
+
+        
+            
+                var html_8babdc55a7515ad5c0032be90d628d93 = $(`<div id="html_8babdc55a7515ad5c0032be90d628d93" style="width: 100.0%; height: 100.0%;"><b>Les comptoirs de la bio </b><br>13 Impasse des champs 74800 AMANCY<br>Code Postal: 74800<br>Date planifié: nan<br>Responsable: nan<br>Detail: </div>`)[0];
+                popup_517880a2118e841928d8d7684c7e9dcb.setContent(html_8babdc55a7515ad5c0032be90d628d93);
+            
+        
+
+        marker_be4efb1650a3f1079b22c2d7e47a104d.bindPopup(popup_517880a2118e841928d8d7684c7e9dcb)
+        ;
+
+        
+    
+    
+            marker_be4efb1650a3f1079b22c2d7e47a104d.bindTooltip(
+                `<div>
+                     Les comptoirs de la bio 
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_bbea0b6cb6c72ae15cb2455ab0860f05 = L.marker(
+                [45.9320536, 6.598599056490881],
+                {
+}
+            ).addTo(map_6921c71aea8d47cf6a2739d4a2acdb77);
+        
+    
+            var div_icon_33ec91e4a8c6c5de3d766711cf43ebb9 = L.divIcon({
+  "html": "\n                    \u003cdiv style=\"\n                        display: flex;\n                        align-items: center;\n                        justify-content: center;\n                        width: 30px;\n                        height: 30px;\n                        border: 4px solid white; \n                        background-color: blue; \n                        color: white; \n                        border-radius: 50%; \n                        font-size: 12px; \n                        font-weight: bold;\"\u003e\n                        \n                    \u003c/div\u003e\n                    ",
+  "className": "empty",
+});
+            marker_bbea0b6cb6c72ae15cb2455ab0860f05.setIcon(div_icon_33ec91e4a8c6c5de3d766711cf43ebb9);
+        
+    
+        var popup_829545656af7518ab5f059d3673b5780 = L.popup({
+  "maxWidth": 400,
+});
+
+        
+            
+                var html_4386cbc7643acf4890b00b1b0b104271 = $(`<div id="html_4386cbc7643acf4890b00b1b0b104271" style="width: 100.0%; height: 100.0%;"><b>Bricorama Domancy</b><br>LD ZAC DES MOUILLES 74700 DOMANCY <br>Code Postal: 74700<br>Date planifié: nan<br>Responsable: nan<br>Detail: </div>`)[0];
+                popup_829545656af7518ab5f059d3673b5780.setContent(html_4386cbc7643acf4890b00b1b0b104271);
+            
+        
+
+        marker_bbea0b6cb6c72ae15cb2455ab0860f05.bindPopup(popup_829545656af7518ab5f059d3673b5780)
+        ;
+
+        
+    
+    
+            marker_bbea0b6cb6c72ae15cb2455ab0860f05.bindTooltip(
+                `<div>
+                     Bricorama Domancy
                  </div>`,
                 {
   "sticky": true,
